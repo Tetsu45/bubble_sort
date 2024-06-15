@@ -9,8 +9,8 @@ int selection_sort(int* arr,int *size){
                 minimum = jx;
             }
             if (minimum != ix){
-                int temp = arr[jx];
-                arr[jx] = arr[ix];
+                int temp = arr[minimum];
+                arr[minimum] = arr[ix];
                 arr[ix] = temp;
                 cnt++;
             }
