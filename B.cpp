@@ -4,14 +4,14 @@ int selection_sort(int* arr,int *size){
     int cnt = 0;
     for(int ix= 0;ix<*size;ix++){
         int minimum = ix;
-        for(int jx= i+1;jx < size;jx++){
+        for(int jx= ix+1;jx < *size;jx++){
             if(arr[jx] < arr[minimum]){
                 minimum = jx;
             }
             if (minimum != ix){
                 int temp = arr[jx];
-                arr[jx] = arr[minimum];
-                arr[minimum] = arr[ix];
+                arr[jx] = arr[ix];
+                arr[ix] = arr[ix];
                 cnt++;
             }
         }
@@ -34,7 +34,7 @@ bool read_input(){
         }
         else cout << arr[j] << " ";
     }
-    delete[] *arr;
+    delete[] arr;
     return true;
 }
 int main(){
