@@ -30,7 +30,7 @@ bool read_input(){
     for (int j = 0;j<size;j++){
         if (j == size-1){
             cout << arr[j] << "\n";
-            cout << arr[j] << endl;
+            cout << count << endl;
         }
         else cout << arr[j] << " ";
     }
