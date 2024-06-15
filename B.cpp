@@ -11,7 +11,7 @@ int selection_sort(int* arr,int *size){
             if (minimum != ix){
                 int temp = arr[jx];
                 arr[jx] = arr[ix];
-                arr[ix] = arr[ix];
+                arr[ix] = temp;
                 cnt++;
             }
         }
