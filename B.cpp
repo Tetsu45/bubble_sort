@@ -7,14 +7,14 @@ int selection_sort(int* arr,int *size){
         for(int jx= ix+1;jx < *size;jx++){
             if(arr[jx] < arr[minimum]){
                 minimum = jx;
-            }
-            if (minimum != ix){
+            }   
+        }
+        if (minimum != ix){
                 int temp = arr[minimum];
                 arr[minimum] = arr[ix];
                 arr[ix] = temp;
                 cnt++;
             }
-        }
     }
     return cnt;
 }
