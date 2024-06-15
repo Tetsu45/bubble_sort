@@ -1,11 +1,22 @@
 #include <iostream>
 using namespace std;
 int selection_sort(int* arr,int *size){
+    int cnt = 0;
     for(int ix= 0;ix<*size;ix++){
-        int minimum = arr[ix];
-        for(int jx= i+1;
+        int minimum = ix;
+        for(int jx= i+1;jx < size;jx++){
+            if(arr[jx] < arr[minimum]){
+                minimum = jx;
+            }
+            if (minimum != ix){
+                int temp = arr[jx];
+                arr[jx] = arr[minimum];
+                arr[minimum] = arr[ix];
+                cnt++;
+            }
+        }
     }
-
+    return cnt;
 }
 bool read_input(){
     int size = 0;
@@ -15,9 +26,20 @@ bool read_input(){
     for(int i= 0;i<size;i++){
         std::cin>>arr[i];
     }
-
-
+    int count =  selection_sort(arr,&size);
+    for (int j = 0;j<size;j++){
+        if (j == size-1){
+            cout << arr[j] << "\n";
+            cout << arr[j] << endl;
+        }
+        else cout << arr[j] << " ";
+    }
+    delete[] *arr;
+    return true;
 }
 int main(){
-    return 0;
+    if(read_input()){
+        return 0;
+    }
+    return -1;
 }
