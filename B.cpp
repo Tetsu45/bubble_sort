@@ -2,9 +2,9 @@
 using namespace std;
 int selection_sort(int* arr,int *size){
     int cnt = 0;
-    for(int ix= 0;ix<*size;ix++){
+    for(int ix= 0;ix<*size-1;ix++){
         int minimum = ix;
-        for(int jx= ix;jx < *size;jx++){
+        for(int jx= ix+1;jx < *size;jx++){
             if(arr[jx] < arr[minimum]){
                 minimum = jx;
             }   
