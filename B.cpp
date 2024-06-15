@@ -4,7 +4,7 @@ int selection_sort(int* arr,int *size){
     int cnt = 0;
     for(int ix= 0;ix<*size;ix++){
         int minimum = ix;
-        for(int jx= ix+1;jx < *size;jx++){
+        for(int jx= ix;jx < *size;jx++){
             if(arr[jx] < arr[minimum]){
                 minimum = jx;
             }   
